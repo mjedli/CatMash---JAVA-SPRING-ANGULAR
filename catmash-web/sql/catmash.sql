@@ -1,0 +1,7 @@
+CREATE DATABASE catmash;
+
+CREATE TABLE `catmash`.`cat` (
+  `SCORE` INT NULL,
+  `URL` VARCHAR(45) NULL,
+  `ID` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ID`));
