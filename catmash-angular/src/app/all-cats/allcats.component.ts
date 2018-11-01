@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-/*
-import { Book } from './book';
-import { BOOKS } from './mock-books';
-
-import { CatMashService } from './book.service';
-*/
+import { RootObject } from './cats.score';
 
 @Component({
   selector: 'catmash-root',
@@ -15,8 +9,6 @@ import { CatMashService } from './book.service';
 })
 
 export class AllCatsComponent implements OnInit {
-
-  //constructor(private bookService: BookService) { }
 
   ngOnInit() {}
 

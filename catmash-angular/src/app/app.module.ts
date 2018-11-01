@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CatMashComponent }   from './catmash/catmash.component';
-import { AllCatsComponent }   from './all-cat/allcats.component';
+import { AllCatsComponent }   from './all-cats/allcats.component';
 
 import { AppRoutingModule } from './app.routing.module';
 
