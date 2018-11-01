@@ -1,7 +1,4 @@
-/**
- * @author mjedli
- *
- */
+
 package com.catmash.configuration;
 
 import java.util.List;
@@ -22,6 +19,11 @@ import org.springframework.web.servlet.view.JstlView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * APPLICATION CONFIG : the spring config
+ * @author mjedli
+ *
+ */
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.catmash")

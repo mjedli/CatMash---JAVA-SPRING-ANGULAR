@@ -14,6 +14,7 @@ import com.catmash.model.Cat;
 import com.catmash.service.CatService;
 
 /**
+ * CATMASH REST CONTROLLER
  * @author mjedli
  *
  */

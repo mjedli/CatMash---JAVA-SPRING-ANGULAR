@@ -1,7 +1,3 @@
-/**
- * @author mjedli
- *
- */
 package com.catmash.configuration;
 
 import java.util.Properties;
@@ -20,6 +16,11 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/**
+ * HIBERNATE CONFIGURATION
+ * @author mjedli
+ *
+ */
 @Configuration
 @EnableTransactionManagement
 @ComponentScan({ "com.catmash.configuration" })

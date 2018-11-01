@@ -1,7 +1,3 @@
-/**
- * @author mjedli
- *
- */
 package com.catmash.configuration;
 
 import javax.servlet.ServletContext;
@@ -12,6 +8,11 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+/**
+ * APPLICATION INITIALIZER
+ * @author mjedli
+ *
+ */
 public class AppInitializer implements WebApplicationInitializer {
 
 	public void onStartup(ServletContext container) throws ServletException {

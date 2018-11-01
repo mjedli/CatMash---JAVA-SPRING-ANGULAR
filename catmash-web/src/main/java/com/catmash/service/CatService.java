@@ -5,6 +5,7 @@ import java.util.List;
 import com.catmash.model.Cat;
 
 /**
+ * CATMASH SERVICE
  * @author mjedli
  *
  */
