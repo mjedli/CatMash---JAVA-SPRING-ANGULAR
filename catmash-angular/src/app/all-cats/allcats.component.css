@@ -1,0 +1,13 @@
+
+.cat-div {
+    background: #cccccc;
+}
+
+.coin {
+    background-color:rgb(215, 221, 230);
+    border:1px solid rgb(196, 214, 214);
+    padding:5px;
+    -moz-border-radius:10px 0;
+    -webkit-border-radius:10px 0;
+    border-radius:15px 0;
+}
