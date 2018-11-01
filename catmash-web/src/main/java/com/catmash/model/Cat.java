@@ -27,17 +27,26 @@ public class Cat implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * Id of cat
+	 */
+	@Id
 	@NotEmpty
 	@NotNull
-	@Id
 	@Column(name = "ID", unique=true, nullable = false)
 	private String id;
 	
+	/**
+	 * url ofthe cat's picture
+	 */
 	@NotEmpty
 	@NotNull
 	@Column(name = "URL", nullable = false)
 	private String url;
 	
+	/**
+	 * the score of the cat
+	 */
 	@Column(name = "SCORE", nullable = false)
 	private Integer score;
 

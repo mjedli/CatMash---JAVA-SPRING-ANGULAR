@@ -33,14 +33,14 @@ public interface CatDao {
 	
 	/**
 	 * Find all cats
-	 * @return
+	 * @return all cats
 	 */
 	List<Cat> findAllCats();
 
 	/**
 	 * Update the score of the cat
 	 * @param cat
-	 * @return
+	 * @return void
 	 */
 	void updateScore(Cat cat);
 }
