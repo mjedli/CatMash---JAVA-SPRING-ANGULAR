@@ -1,20 +1,12 @@
 
 
 <div *ngFor="let Cat of Cats" class="row">
-    <div class="col" align="center"></div>
-        <div class="col cat-div coin" align="center">
-            <br>
-            <img class="coin" src="{{Cat.url}}" width="250" height="250">
-            <br><br>
-            <h3>Score : {{Cat.score}}</h3>
-            <br><br>
-        </div>
-        <div class="col cat-div coin" align="center">
-            <br>
-            <img class="coin" src="http://24.media.tumblr.com/tumblr_m29a9d62C81r2rj8po1_500.jpg" width="250" height="250">
-            <br><br>
-            <h3>Score : 5</h3>
-            <br><br>
-        </div>
-    <div class="col" align="center"></div>
+    <div class="col" align="center">
+        <br>
+        <img class="coin" src="{{Cat.url}}" width="250" height="250">
+        <br><br>
+        <h3>Score : {{Cat.score}}</h3>
+        <br><br>
+        <hr>
+    </div>
 </div>
