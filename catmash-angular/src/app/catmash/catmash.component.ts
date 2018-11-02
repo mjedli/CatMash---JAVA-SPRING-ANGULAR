@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { RootObject } from './cats.score';
-
 import { CatMashService } from './catmash.service';
 
 @Component({
@@ -14,27 +13,32 @@ export class CatMashComponent implements OnInit {
 
   constructor(private catMashService: CatMashService) { }
 
+  private catMashUrl = 'catmash';
+
   Cats : RootObject[];
   firstCatImage : RootObject;
   secondCatImage : RootObject;
 
+  /* update socre of cat*/
   myFavorit(id:string, url:string) {
     try {
       this.catMashService.updateScore(id, url).toPromise().then(x => {},
       error => {
           console.log(error, "error");
       }).then(x => {
-        window.location.replace("catmash");
+        window.location.replace(this.catMashUrl);
       });
     } catch (e) {
       console.log(e);
     }   
   }
 
+  /* get all cats */
   getCats(): void {
     this.catMashService.getCats().subscribe(Cats => this.Cats = Cats);
   }
 
+  /* inti component, get all cats and select two cats */
   ngOnInit() {
     try {
       this.catMashService.getCats().toPromise().then(Cats => {
