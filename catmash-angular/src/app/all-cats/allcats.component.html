@@ -1,12 +1,12 @@
 
 
-<div class="row">
+<div *ngFor="let Cat of Cats" class="row">
     <div class="col" align="center"></div>
         <div class="col cat-div coin" align="center">
             <br>
-            <img class="coin" src="http://24.media.tumblr.com/tumblr_m82woaL5AD1rro1o5o1_1280.jpg" width="250" height="250">
+            <img class="coin" src="{{Cat.url}}" width="250" height="250">
             <br><br>
-            <h3>Score : 5</h3>
+            <h3>Score : {{Cat.score}}</h3>
             <br><br>
         </div>
         <div class="col cat-div coin" align="center">

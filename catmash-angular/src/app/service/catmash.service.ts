@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
 
-import { RootObject } from './cats.score';
+import { RootObject } from '../model/cats.score';
 
 @Injectable({
   providedIn: 'root',

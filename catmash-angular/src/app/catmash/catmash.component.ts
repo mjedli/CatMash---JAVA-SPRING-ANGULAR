@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RootObject } from './cats.score';
-import { CatMashService } from './catmash.service';
+import { RootObject } from '../model/cats.score';
+import { CatMashService } from '../service/catmash.service';
 
 @Component({
   selector: 'catmash-root',

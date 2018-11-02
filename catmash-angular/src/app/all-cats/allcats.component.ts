@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RootObject } from './cats.score';
+import { RootObject } from '../model/cats.score';
+import { CatMashService } from '../service/catmash.service';
 
 @Component({
   selector: 'catmash-root',
@@ -10,6 +11,23 @@ import { RootObject } from './cats.score';
 
 export class AllCatsComponent implements OnInit {
 
-  ngOnInit() {}
+  constructor(private catMashService: CatMashService) { }
+
+  Cats : RootObject[];
+
+  /* inti component, get all cats */
+  ngOnInit() {
+    try {
+      this.catMashService.getCats().toPromise().then(Cats => {
+          this.Cats = Cats;
+          console.log(this.Cats);
+      },
+      error => {
+          console.log(error, "error*****");
+      })
+    } catch (e) {
+      console.log(e);
+    }
+  }
 
 }
