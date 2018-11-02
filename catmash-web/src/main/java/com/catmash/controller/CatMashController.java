@@ -6,6 +6,7 @@ package com.catmash.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +29,7 @@ public class CatMashController {
 	 * Get all cats
 	 * @return list of cats
 	 */
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/cats")
 	public List<Cat> findAllCats() {
 		try {
@@ -42,6 +44,7 @@ public class CatMashController {
 	 * @param id : the id of cat
 	 * @param url : the url of cat
 	 */
+	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/updateScore")
 	public int updateScore(@RequestParam(value="id") String id, 
 			@RequestParam(value="url") String url) {
