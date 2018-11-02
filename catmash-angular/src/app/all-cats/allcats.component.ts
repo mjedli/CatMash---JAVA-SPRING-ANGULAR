@@ -20,7 +20,6 @@ export class AllCatsComponent implements OnInit {
     try {
       this.catMashService.getCats().toPromise().then(Cats => {
           this.Cats = Cats;
-          console.log(this.Cats);
       },
       error => {
           console.log(error, "error*****");
