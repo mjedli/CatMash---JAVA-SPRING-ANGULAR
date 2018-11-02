@@ -18,6 +18,19 @@ export class CatMashComponent implements OnInit {
   firstCatImage : RootObject;
   secondCatImage : RootObject;
 
+  myFavorit(id:string, url:string) {
+    try {
+      this.catMashService.updateScore(id, url).toPromise().then(x => {},
+      error => {
+          console.log(error, "error");
+      }).then(x => {
+        window.location.replace("catmash");
+      });
+    } catch (e) {
+      console.log(e);
+    }   
+  }
+
   getCats(): void {
     this.catMashService.getCats().subscribe(Cats => this.Cats = Cats);
   }
@@ -32,7 +45,11 @@ export class CatMashComponent implements OnInit {
       }).then(x => {
         var firstCatNumber = Math.floor(Math.random() * this.Cats.length);
         var secondCatNumber = Math.floor(Math.random() * this.Cats.length);
-        console.log(firstCatNumber + " - " + secondCatNumber + " - " + this.Cats.length);
+
+        while(firstCatNumber == secondCatNumber) {
+          secondCatNumber = Math.floor(Math.random() * this.Cats.length);
+        }
+
         this.firstCatImage = this.Cats[firstCatNumber];
         this.secondCatImage = this.Cats[secondCatNumber];
       });

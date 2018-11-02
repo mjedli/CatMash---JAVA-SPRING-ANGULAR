@@ -6,14 +6,18 @@
         <br>
         <img class="coin" src="{{firstCatImage.url}}" width="250" height="250">
         <br><br>
-        <button type="button" class="btn btn-success">My Favorite</button>
+        <input type="hidden" name="isbnBook" class="form-control" #id1 value="{{firstCatImage.id}}">
+        <input type="hidden" name="priceBook" class="form-control" #url1 value="{{firstCatImage.url}}">
+        <button type="submit" (click) = 'myFavorit(id1.value, url1.value)' class="btn btn-success">My Favorite</button>
         <br><br>
     </div>
     <div class="col cat-div coin" align="center">
         <br>
         <img class="coin" src="{{secondCatImage.url}}" width="250" height="250">
         <br><br>
-        <button type="button" class="btn btn-success">My Favorite</button>
+        <input type="hidden" name="isbnBook" class="form-control" #id2 value="{{secondCatImage.id}}">
+        <input type="hidden" name="priceBook" class="form-control" #url2 value="{{secondCatImage.url}}">
+        <button type="submit" (click) = 'myFavorit(id2.value, url2.value)' class="btn btn-success">My Favorite</button>
         <br><br>
     </div>
     <div class="col" align="center"></div>
