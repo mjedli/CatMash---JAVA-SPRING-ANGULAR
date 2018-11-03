@@ -11,22 +11,22 @@ import { CatMashService } from '../service/catmash.service';
 
 export class AllCatsComponent implements OnInit {
 
-  constructor(private catMashService: CatMashService) { }
+    constructor(private catMashService: CatMashService) { }
 
-  Cats : RootObject[];
+    Cats : RootObject[];
 
-  /* inti component, get all cats */
-  ngOnInit() {
-    try {
-      this.catMashService.getCats().toPromise().then(Cats => {
-          this.Cats = Cats;
-      },
-      error => {
-          console.log(error, "error*****");
-      })
-    } catch (e) {
-      console.log(e);
+    /* inti component, get all cats */
+    ngOnInit() {
+        try {
+            this.catMashService.getCats().toPromise().then(Cats => {
+                this.Cats = Cats;
+            },
+            error => {
+                console.log(error, "error");
+            })
+        } catch (e) {
+            console.log(e);
+        }
     }
-  }
 
 }

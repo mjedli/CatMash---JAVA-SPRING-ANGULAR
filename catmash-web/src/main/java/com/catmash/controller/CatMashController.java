@@ -23,7 +23,7 @@ import com.catmash.service.CatService;
 public class CatMashController {
 
 	@Autowired
-	CatService service;
+	private CatService service;
 	
 	/**
 	 * Get all cats
