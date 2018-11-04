@@ -5,13 +5,13 @@ import { CatMashComponent }   from './catmash/catmash.component';
 import { AllCatsComponent }   from './all-cats/allcats.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/catmash', pathMatch: 'full' },
+  { path: '', redirectTo: 'catmash', pathMatch: 'full' },
   { path: 'catmash', component: CatMashComponent },
   { path: 'cats', component: AllCatsComponent }
 ];
  
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forRoot(routes, { useHash: true }) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}

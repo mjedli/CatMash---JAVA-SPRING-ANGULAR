@@ -29,7 +29,7 @@ public class CatMashController {
 	 * Get all cats
 	 * @return list of cats
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "https://catmash-angular.azurewebsites.net")
 	@RequestMapping("/cats")
 	public List<Cat> findAllCats() {
 		try {
@@ -44,7 +44,7 @@ public class CatMashController {
 	 * @param id : the id of cat
 	 * @param url : the url of cat
 	 */
-	@CrossOrigin(origins = "http://localhost:4200")
+	@CrossOrigin(origins = "https://catmash-angular.azurewebsites.net")
 	@RequestMapping("/updateScore")
 	public int updateScore(@RequestParam(value="id") String id, 
 			@RequestParam(value="url") String url) {

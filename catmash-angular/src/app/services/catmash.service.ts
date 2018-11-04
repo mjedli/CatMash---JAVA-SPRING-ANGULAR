@@ -11,8 +11,8 @@ import { RootObject } from '../model/cats.score';
 
 export class CatMashService {
 
-    private catMashUrl = 'http://localhost:8080/catmash-web/cats';
-    private updateScoreUrl = 'http://localhost:8080/catmash-web/updateScore';
+    private catMashUrl = 'https://webapp-181103163839.azurewebsites.net/catmash-web/cats';
+    private updateScoreUrl = 'https://webapp-181103163839.azurewebsites.net/catmash-web/updateScore';
 
     constructor(private http: HttpClient) { }
 

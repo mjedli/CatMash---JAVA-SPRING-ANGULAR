@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { RootObject } from '../model/cats.score';
-import { CatMashService } from '../service/catmash.service';
+import { CatMashService } from '../services/catmash.service';
 
 @Component({
   selector: 'catmash-root',
@@ -13,7 +13,7 @@ export class CatMashComponent implements OnInit {
 
     constructor(private catMashService: CatMashService) { }
 
-    private catMashUrl = 'catmash';
+    private catMashUrl = '';
 
     Cats : RootObject[];
     firstCatImage : RootObject;
